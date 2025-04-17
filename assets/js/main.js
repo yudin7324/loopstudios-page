@@ -25,5 +25,4 @@ document.addEventListener('DOMContentLoaded', () => {
       burger.classList.add(classes.ACTIVE);
     }
   }
-
 });
