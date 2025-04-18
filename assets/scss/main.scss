@@ -4,6 +4,7 @@
 @use 'hero';
 @use 'interactive';
 @use 'creations';
+@use 'footer';
 
 .main {
   color: var(--color-black);
@@ -66,4 +67,9 @@
     background-color: var(--color-black);
     color: var(--color-white);
   }
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }

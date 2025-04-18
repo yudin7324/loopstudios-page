@@ -1,0 +1,144 @@
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  margin-top: 96px;
+  padding: 56px 0;
+
+  @media (min-width: 768px) {
+    margin-top: 184px;
+    padding: 44px 0 43px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    width: 144px;
+    height: 24px;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__nav {
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-top: 32px;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 32px;
+        margin-top: 24px;
+      }
+    }
+
+    &-link {
+      position: relative;
+      font-size: 15px;
+      line-height: 1.67;
+
+      &:after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -8px;
+        content: "";
+        width: 24px;
+        height: 2px;
+        background-color: var(--color-white);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__media {
+
+    &-list {
+      display: flex;
+      gap: 16px;
+      align-self: center;
+
+      @media (min-width: 768px) {
+        align-self: flex-end;
+      }
+    }
+
+    &-link {
+      position: relative;
+      width: 24px;
+      height: 24px;
+
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -8px;
+        content: "";
+        width: 24px;
+        height: 2px;
+        background-color: var(--color-white);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__copy {
+    font-size: 15px;
+    line-height: 1.67;
+    opacity: 0.5;
+    margin-top: 16px;
+
+    @media (min-width: 768px) {
+      margin-top: 24px;
+    }
+  }
+}
